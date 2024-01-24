@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1ABBFBC5-3BD9-4CFF-B2BF-993D67FE5D9B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Car_Parking</RootNamespace>
+    <AssemblyName>Car_Parking</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\ХНУРЄ\Високорівневі мови програмування та фреймворки\Курсовой\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1B1FA4BF0AB21FB64698318B56176267DDDE3576</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Car_Parking_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.PdfSharp, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\HtmlRenderer.PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.WinForms, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\HtmlRenderer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicNP.CryptoLicensing, Version=11.0.0.0, Culture=neutral, PublicKeyToken=4a3c0a4c668b48b4">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\LogicNP.CryptoLicensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.5.21.0, Culture=neutral, PublicKeyToken=0d013ddd5178a2ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf, Version=3.6.3.2704, Culture=neutral, PublicKeyToken=0067ab5fb178b204, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\Patagames.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf.WinForms, Version=3.4.1.0, Culture=neutral, PublicKeyToken=0067ab5fb178b204, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\Patagames.Pdf.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Patagames.Pdf.Wpf, Version=3.4.2.0, Culture=neutral, PublicKeyToken=0067ab5fb178b204, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVC_PPC_Theme_ByTom.1.4.1\lib\Patagames.Pdf.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CarParkingDataSet.cs">
+      <DependentUpon>CarParkingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarParkingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarParkingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryEdit.Designer.cs">
+      <DependentUpon>QueryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QueryEdit.resx">
+      <DependentUpon>QueryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App_Code\GlyphIcon.cshtml" />
+    <None Include="CarParkingDataSet.xsc">
+      <DependentUpon>CarParkingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarParkingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarParkingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarParkingDataSet.xss">
+      <DependentUpon>CarParkingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Car_Parking_TemporaryKey.pfx" />
+    <None Include="Content\bootstrap-material-design.css.map" />
+    <None Include="Content\bootstrap-material-design.min.css.map" />
+    <None Include="Content\bootstrap-theme.css.map" />
+    <None Include="Content\bootstrap-theme.min.css.map" />
+    <None Include="Content\bootstrap.css.map" />
+    <None Include="Content\bootstrap.min.css.map" />
+    <None Include="Content\ripples.css.map" />
+    <None Include="Content\ripples.min.css.map" />
+    <None Include="Content\styles\Master_Style\checkbox_radion.less" />
+    <None Include="Content\styles\Master_Style\nav_1.less" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\material.min.js.map" />
+    <None Include="Scripts\ripples.min.js.map" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-material-design.css" />
+    <Content Include="Content\bootstrap-material-design.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\ripples.css" />
+    <Content Include="Content\ripples.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\styles\images\sort_asc.png" />
+    <Content Include="Content\styles\images\sort_both.png" />
+    <Content Include="Content\styles\images\sort_desc.png" />
+    <Content Include="Content\styles\Master_Style\bootstrap-material-datetimepicker.css" />
+    <Content Include="Content\styles\Master_Style\bootstrap-select.min.css" />
+    <Content Include="Content\styles\Master_Style\checkbox_radion.css" />
+    <Content Include="Content\styles\Master_Style\checkbox_radion.min.css" />
+    <Content Include="Content\styles\Master_Style\demo.css" />
+    <Content Include="Content\styles\Master_Style\fileinput.min.css" />
+    <Content Include="Content\styles\Master_Style\jquery.dataTables.min.css" />
+    <Content Include="Content\styles\Master_Style\metisMenu.min.css" />
+    <Content Include="Content\styles\Master_Style\nav_1.css" />
+    <Content Include="Content\styles\Master_Style\nav_1.min.css" />
+    <Content Include="Content\styles\Master_Style\responsive.dataTables.min.css" />
+    <Content Include="Content\styles\Master_Style\stimulsoft.viewer.office2013.whitegreen.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Master_Scripts\bootstrap-dialog.min.js" />
+    <Content Include="Scripts\Master_Scripts\bootstrap-material-datetimepicker.js" />
+    <Content Include="Scripts\Master_Scripts\bootstrap-select.min.js" />
+    <Content Include="Scripts\Master_Scripts\bootstrap.js" />
+    <Content Include="Scripts\Master_Scripts\dataTables.responsive.min.js" />
+    <Content Include="Scripts\Master_Scripts\fileinput.min.js" />
+    <Content Include="Scripts\Master_Scripts\formValidation.min.js" />
+    <Content Include="Scripts\Master_Scripts\Highcharts\highcharts.js" />
+    <Content Include="Scripts\Master_Scripts\Highcharts\highcharts.min.js" />
+    <Content Include="Scripts\Master_Scripts\Highcharts\modules\exporting.js" />
+    <Content Include="Scripts\Master_Scripts\Highcharts\modules\exporting.min.js" />
+    <Content Include="Scripts\Master_Scripts\jBootstrap-dialog.js" />
+    <Content Include="Scripts\Master_Scripts\jBootstrap-dialog.min.js" />
+    <Content Include="Scripts\Master_Scripts\jCommon.js" />
+    <Content Include="Scripts\Master_Scripts\jCommon.min.js" />
+    <Content Include="Scripts\Master_Scripts\jCustomPageMain.js" />
+    <Content Include="Scripts\Master_Scripts\jCustomPageMain.min.js" />
+    <Content Include="Scripts\Master_Scripts\jnav_1.js" />
+    <Content Include="Scripts\Master_Scripts\jnav_1.min.js" />
+    <Content Include="Scripts\Master_Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\Master_Scripts\jquery.cookie.min.js" />
+    <Content Include="Scripts\Master_Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\Master_Scripts\jReportViewer.js" />
+    <Content Include="Scripts\Master_Scripts\jReportViewer.min.js" />
+    <Content Include="Scripts\Master_Scripts\linq.min.js" />
+    <Content Include="Scripts\Master_Scripts\loadingoverlay.min.js" />
+    <Content Include="Scripts\Master_Scripts\loadingoverlay_progress.min.js" />
+    <Content Include="Scripts\Master_Scripts\metisMenu.min.js" />
+    <Content Include="Scripts\Master_Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.designer.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.designer.pack.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.reports.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.reports.maps.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.reports.maps.pack.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.reports.pack.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.viewer.js" />
+    <Content Include="Scripts\Master_Scripts\Stimulsoft\stimulsoft.viewer.pack.js" />
+    <Content Include="Scripts\material.js" />
+    <Content Include="Scripts\material.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ripples.js" />
+    <Content Include="Scripts\ripples.min.js" />
+    <Content Include="Scripts\Shared\j_Layout.js" />
+    <Content Include="Scripts\Shared\j_Layout.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
